@@ -1,0 +1,95 @@
+body{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 20px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 160px;
+  min-width: 800px;
+}
+.container{
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 160px;
+  min-width: 800px;
+
+}
+.container_r{
+  margin-bottom: 60px;
+}
+.title{
+  font-size: 36px;
+  color:rgb(99, 55, 29);
+  max-width: 1200px;
+  min-width: 800px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 30px;
+  margin-bottom: 30px;
+}
+.name, .E-mail, #phone, .Password{
+  margin-top: 20px;
+  width: 500px;
+  height: 40px;
+  box-sizing: border-box;
+  padding: 0 18px;
+  border: 1px solid #44362f;
+  border-radius: 20px;
+  color: #44362f;
+}
+.registration{
+  max-width: 1200px;
+  min-width: 800px;
+}
+.input_blok{
+  padding-top: 10px;
+  padding-bottom: 30px;
+  text-align: center;
+  width: 550px;
+  margin: auto;
+  background-color: rgba(243, 243, 243, 0.507);
+  border-radius: 20px;
+  border: 1px solid #44362f;
+}
+.button_r{
+  margin-top: 30px;
+}
+.button{
+  text-decoration: none;
+  color:black;
+}
+.button_board{
+  width: 180px;
+  height: 50px;
+  background: #917362b9;
+  border-radius: 20px;
+  margin: auto;
+  position: relative;
+  border: 2px solid;
+  border-color: #534432c2;
+}
+.button_blok{
+  width: 145px;
+  height: 25px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  overflow: auto;
+}
+.button_line{
+  width: 500px;
+  margin-top: 10px;
+}
+.authorization{
+  margin-top: 10px;
+}
+#authorization{
+  text-decoration: none;
+  color:rgb(99, 55, 29);
+}

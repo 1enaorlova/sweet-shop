@@ -1,0 +1,137 @@
+body{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 20px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 160px;
+  min-width: 800px;
+}
+.container{
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 160px;
+  min-width: 800px;
+}
+.blok_imeg_cake{
+  width: 400px;
+  float: left;
+  position: relative;
+}
+.name_blok{
+  height: 45px;
+}
+.name_tort{
+  color:rgb(99, 55, 29);
+  font-size: 25px;
+  padding-top: 10px;
+  background-color:white;
+  width: 100px;
+  height: 35px;
+  float: left;
+}
+.line{
+  height: 35px;
+  border-bottom: solid 3px;
+  color:rgb(99, 55, 29);
+}
+.imag{
+  height: 250px;
+  width: 350px;
+  position: relative;
+}
+.imag_cake{
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  
+}
+.name_cake{
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.inform{
+  width: 350px;
+  position: relative;
+}
+.text{
+  text-decoration: none;
+  color: rgb(99, 55, 29);
+}
+.article_block{
+  font-size: 15px;
+  text-align: center;
+  color: rgb(99, 55, 29);
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.cake_blok{
+  width: 350px;
+  height: 450px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  float: left;
+  margin: auto;
+}
+.price{
+  text-align: center;
+  color: rgb(99, 55, 29);
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.button{
+  text-decoration: none;
+  color: rgb(99, 55, 29);
+ 
+}
+.button_board{
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border: solid 1px;
+  border-color:rgb(61, 36, 19);
+}
+.cake_price{
+  display: flex;
+}
+.name_bakery{
+  color:rgb(99, 55, 29);
+  font-size: 25px;
+  padding-top: 10px;
+  background-color:white;
+  width: 120px;
+  height: 35px;
+  float: left;
+}
+.bakery{
+  display: flex;
+}
+.bakery_blok{
+  width: 350px;
+  height: 450px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  float: left;
+  margin: auto;
+}
+.blok_imeg_bakery{
+  width: 400px;
+  float: left;
+  position: relative;
+}
+.imag_bakery{
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto; 
+}
+.dessert{
+  display: flex;
+}

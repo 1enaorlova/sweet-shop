@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style_menu.css">
+  <link rel="stylesheet" href="style_authorization.css">
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+  <script type="text/javascript" src="jquery.maskedinput.js"></script>
+  <title>Document</title>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="header_inner">
+        <div class="left"></div>
+        <div class="logo_desk">
+          <div class="logo_image">
+            <a href="file:index.html">
+              <img src="images/logo1.jpg" width="200" height="70">
+            </a>
+          </div>
+        </div>
+        <div class="right">
+          <div class="nav">
+            <a><img src="images/user.png" width="70" height="70"></a>
+            <a><img src="images/like.png" width="70" height="70"></a>
+            <a><img src="images/basket.png" width="70" height="70"></a>
+          </div>
+        </div>
+      </div>
+      <div class="header_menu">
+        <ul class="u">
+          <li class="m"><a class="down" href="file:catalog.html#Cake">Торты</a></li>
+          <li class="m"><a class="down" href="file:catalog.html#Bakery">Выпечка</a></li>
+          <li class="m"><a class="down" href="file:catalog.html#Dessert">Десерты</a></li>
+          <li class="m"><a class="down" href="file:designer.html">Торты на заказ</a></li>
+        </ul>
+      </div>
+      <div></div>
+    </div>
+  </header>
+  <div class="container_a">
+    <div class="title">Авторизация</div>
+    <div class="authorization">
+      <div class="input_blok">
+        <input required="required" placeholder="+7 ( _ _ _ ) _ _ _ - _ _ - _ _" type="text" id="phone">
+        <input type="text" id = "Password1" class="Password" placeholder="Пароль" > 
+        <div class="button_r">
+          <div class="button_board">
+            <a class="button" href="" onclick="">
+              <div class="button_blok">
+                Вход
+              </div>
+            </a>
+         </div>
+       </div>
+       <a href="file:registration.html" id="registration">
+        <div class="registration" >
+          Регестрация
+        </div>
+      </a>
+      </div>
+    </div>
+  </div>
+  <script>
+        jQuery(function($){
+      $("#phone").mask("+7(999) 999-9999");
+    });
+  </script>
+
+  <div class="p">
+    <div class="svyz">
+      <div class="pochta">
+        <div class="e-mail_icon">
+          <img src="images/e-mail.png" width="90px" height="90px"  class="figa">
+        </div>
+        <div class="e-mail_text">
+          <p class="e_text">VanillaCake@gmail.com</p>
+        </div>
+      </div>
+      <div class="telefon">
+        <div class="phone_icon">
+          <img src="images/phone.png" width="70px" height="70px"  class="figa">
+        </div>
+        <div class="phone_text">
+          <p class="p_text">89642652002</p>
+        </div>
+      </div>
+    </div>
+    <div class="adress">
+      <p class="adress_h">Адреса</p>
+      <p class="adress_text">улица Пушкина, дом 13</p>
+      <p class="adress_text">улица Пушкина, дом 13</p>
+      <p class="adress_text">улица Пушкина, дом 13</p>
+    </div>
+  </div>
+  
+</body>
+</html>

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style_designer.css">
+  <link rel="stylesheet" href="style_menu.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+  <script type="text/javascript" src="jquery.maskedinput.js"></script>
+  <title>Document</title>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="header_inner">
+        <div class="left"></div>
+        <div class="logo_desk">
+          <div class="logo_image">
+            <a href="file:index.html">
+              <img src="images/logo1.jpg" width="200" height="70">
+            </a>
+          </div>
+        </div>
+        <div class="right">
+          <div class="nav">
+            <a><img src="images/user.png" width="70" height="70"></a>
+            <a><img src="images/like.png" width="70" height="70"></a>
+            <a><img src="images/basket.png" width="70" height="70"></a>
+          </div>
+        </div>
+      </div>
+      <div class="header_menu">
+        <ul class="u">
+          <li class="m"><a class="down" href="file:catalog.html#Cake">Торты</a></li>
+          <li class="m"><a class="down" href="file:catalog.html#Bakery">Выпечка</a></li>
+          <li class="m"><a class="down" href="file:catalog.html#Dessert">Десерты</a></li>
+          <li class="m"><a class="down" href="file:designer.html">Торты на заказ</a></li>
+        </ul>
+      </div>
+      <div></div>
+    </div>
+  </header>
+  <div class="constructor">
+    <div class="box">
+      <div class="Foto_cake">
+        <div class="tort-foto">
+          <img src="images/tort.jpg" height="500px" width="500px">
+        </div>
+      </div>
+      <div class="sborka">
+        <div class="sborka-torta">
+          <div class="info">
+            <p>Внимание! Заявки на изготовление тортов по индивидуальному заказу принимаются за 7 дней до даты Вашего торжества</p>
+            <p>Заказ принимается в работу после внесения предоплаты</p>
+          </div>
+          <div class="weight">
+            <div class="cake_weight_label">
+              Вес:
+            </div>
+            <div class="range_DIV">   
+              <div class="range_blok">
+                <output for="fader" id="volume">1</output>
+                <input type="range" id="fader" min="0" max="10" steps="1" value="1" oninput="outputUpdate(value)">
+              </div>
+            </div>
+          </div> 
+          <div class="datepicker_topping">
+            <div class="topping">   
+              <select name="cake_order_select" id="cake_list">
+                <option value="0">Начинка</option>
+                <option value="2000">Брауни</option>
+                <option value="1500">Малиновый бархат</option>
+                <option value="1800">Для вас</option>
+                <option value="2300">Зебра</option>
+              </select>
+            </div>
+            <input type="date" id= "date"class="datepicker" placeholder="Дата изготовления" >
+          </div>
+          <input type="text" id = "nameUser" class="name" placeholder="Имя Фамилия" >
+          <input required="required" placeholder="+7 ( _ _ _ ) _ _ _ - _ _ - _ _" type="text" id="phone">
+          <input type="text" class="E-mail" placeholder="E-mail" >
+          <div class="order">
+            <select class="cake_adress" id="address_list">
+              <option value="">Где забрать</option>
+              <option value="Пушкина">улица Пушкина, дом 13</option>
+              <option value="Ленина">улица Ленина, дом 13</option>
+              <option value="Дальневосточная">улица Дальневосточная, дом 13</option>
+              <option value="Депутатская">улица Депутатская, дом 13</option>
+            </select>  
+            <select name="cake_payment" id = "pay">
+              <option value="">Способ оплаты</option>
+              <option value="Наличные">Наличные</option>
+              <option value="Безналичные">Безналичные</option>
+            </select>
+          </div>
+          <input type="text" class="comment" id = "comm" placeholder="Комментарий к заказу" >
+          <div class="drop_foto">
+            <div class="text_drop_foto">Вы можете прикрепить фото с желаемым дизайном</div>
+            <div class="example-1">
+              <div class="form-group">
+                <label class="label">
+                  <i class="material-icons">attach_file</i>
+                  <span class="title" id="file-name" for="file">Добавить файл</span>
+                  <input id="uploaded-file1" class="inputfile" type="file" name="file">
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="cost">
+            <div class="cost_box">
+              <div class="text_cost"> <p>Стоимость:</p> </div>
+              <div class="result" ><input id="result-input" disabled placeholder="0"></div>
+            </div>
+          </div>
+          <div class="button_line">
+            <div class="button_board">
+              <a class="button" href="file:designer.html" onclick="clickHandler()">
+              <div class="button_blok">
+                Заказать торт
+              </div>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <script type="text/javascript">
+          function outputUpdate(vol){
+            var output = document.querySelector('#volume');
+            output.value = vol;
+          }
+
+          var result = document.querySelector('#result-input');
+          var cost_cake = 0;
+          var m;
+          
+          var func = document.querySelector("#cake_list").addEventListener('change', function (e) {              
+              cost_cake = e.target.value;
+              cost_cake = parseFloat(cost_cake)
+
+            })
+
+          var func2 = document.querySelector('#fader').addEventListener('change', function (n){
+
+            m= n.target.value;
+            m = parseFloat(m)
+            result.value = cost_cake*m;
+
+          }) 
+          jQuery(function($){
+            $("#phone").mask("+7(999) 999-9999");
+          });
+
+          var file;
+          var filename
+
+          document.querySelector('#uploaded-file1').addEventListener('change', function (f){
+
+            console.log(f.target.value);
+            file = f.target.files[0].name;
+            console.log(file); 
+            document.querySelector('#file-name').textContent = file;
+          })
+
+          function clickHandler () {
+            let volume = document.getElementById('volume').value;
+            let cake_list = document.getElementById('cake_list');
+            let cake_ = cake_list.options[cake_list.selectedIndex].text;
+            let date = document.getElementById('date').value;
+            let nameUser = document.getElementById('nameUser').value;
+            let phone = document.getElementById('phone').value;
+            let address_list = document.getElementById('address_list');
+            let address_ = address_list.options[address_list.selectedIndex].text;
+            let pay = document.getElementById('pay').value;
+            let comm = document.getElementById('comm').value;
+            let result = document.getElementById('result-input').value;
+
+            let requestBody = {
+              weight: volume,
+              topping: cake_,
+              datepicker: date,
+              name: nameUser,
+              numberphone: phone,
+              adress: address_,
+              payment: pay,
+              comment: comm,
+              result_input: result
+            }
+
+            fetch('http://localhost:3000',
+            {
+                method: 'post',
+                body: JSON.stringify(requestBody)
+            })
+           .then((resp) => {
+               return resp.text();
+            })
+            .then((text) => {
+                document.getElementById('placeholder').innerHTML = text;
+            });
+        }
+        </script>
+      </div>
+      <div style = "clear: both"></div>
+    </div>
+  </div>
+
+
+  <div class="p">
+    <div class="svyz">
+      <div class="pochta">
+        <div class="e-mail_icon">
+          <img src="images/e-mail.png" width="90px" height="90px"  class="figa">
+        </div>
+        <div class="e-mail_text">
+          <p class="e_text">VanillaCake@gmail.com</p>
+        </div>
+      </div>
+      <div class="telefon">
+        <div class="phone_icon">
+          <img src="images/phone.png" width="70px" height="70px"  class="figa">
+        </div>
+        <div class="phone_text">
+          <p class="p_text">89642652002</p>
+        </div>
+      </div>
+    </div>
+    <div class="adress">
+      <p class="adress_h">Адреса</p>
+      <p class="adress_text">улица Пушкина, дом 13</p>
+      <p class="adress_text">улица Пушкина, дом 13</p>
+      <p class="adress_text">улица Пушкина, дом 13</p>
+    </div>
+  </div>
+  
+</body>
+</html>
